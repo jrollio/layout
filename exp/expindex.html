@@ -1,0 +1,39 @@
+f<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex n Grid</title>
+    <style type="text/css">
+      #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr
+      }
+      #A { color: white; background: royalblue; grid-column: 1 / span 2; grid-row: 2; align-self: end; }
+      #B { color: white; background: mediumslateblue; grid-column: 1; grid-row: 1; z-index: 10; }
+      #C { color: white; background: orange;grid-column: 2; grid-row: 1; align-self: start; margin-left: -20px; }
+      #D { color: white; background: darkolivegreen;grid-column: 2; grid-row: 2; justify-self: end; align-self: start; }
+      #E { color: white; background: maroon;grid-column: 1 / span 2; grid-row: 1 / span 2;
+           z-index: 5; justify-self: center; align-self: center; }
+      </style>
+</head>
+<body>
+  <div id="grid">
+    <div id="A">A0
+    <div id="grid">
+      <div id="A">A1</div>
+      <div id="B" style="border: 2px solid orangered">B1</div>
+      <div id="C">C1</div>
+      <div id="D">D1</div>
+      <div id="E">E1</div>
+    </div>
+  </div>
+    <!-- <div id="A">A2</div> -->
+      <div id="B" style="border: 2px solid blue">B2</div>
+    <div id="C">C2</div>
+    <div id="D">D2</div>
+    <div id="E">E2</div>
+  </div>
+</body>
+</html>
